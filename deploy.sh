@@ -1,6 +1,6 @@
-docker build -t rakesh0docker/multi-client:latest rakesh0docker/multi-client:$SHA  -f ./client/Dockerfile ./client
-docker build -t rakesh0docker/multi-server:latest rakesh0docker/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t rakesh0docker/multi-worker:latest rakesh0docker/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t rakesh0docker/multi-client:latest -t rakesh0docker/multi-client:$SHA  -f ./client/Dockerfile ./client
+docker build -t rakesh0docker/multi-server:latest -t rakesh0docker/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t rakesh0docker/multi-worker:latest -t rakesh0docker/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push rakesh0docker/multi-client:latest
 docker push rakesh0docker/multi-server:latest
 docker push rakesh0docker/multi-worker:latest
