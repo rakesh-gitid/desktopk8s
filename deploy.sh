@@ -9,5 +9,5 @@ docker push rakesh-gitid/multi-server:$SHA
 docker push rakesh-gitid/multi-worker:$SHA
 kubectl apply -f k8s/
 kubectl set image deployments/server-deployment server=rakesh-gitid/multi-server:$SHA
-kubectl set image deployments/client-deployment server=rakesh-gitid/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=rakesh-gitid/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=rakesh-gitid/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=rakesh-gitid/multi-worker:$SHA
